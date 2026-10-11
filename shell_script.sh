@@ -8,8 +8,6 @@
 # Owner : Siddhant Desai
 ############
 
-helper()
-
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -50,6 +48,7 @@ function helper{
     required_args = 2
     if [$# -ne required_args]; then 
         echo "Please provide ${REPO_OWNER} and ${REPO_NAME} args!!"
+    fi
 }
 
 # Main script
