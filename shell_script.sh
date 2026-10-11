@@ -1,5 +1,15 @@
 #!/bin/bash
 
+#############
+# Name : Shell_script
+# About : Script helps validate the id of users assigned for specific github repository.
+# Input : Needs a git ussername pswd token configured
+#
+# Owner : Siddhant Desai
+############
+
+helper()
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -34,6 +44,12 @@ function list_users_with_read_access {
         echo "Users with read access to ${REPO_OWNER}/${REPO_NAME}:"
         echo "$collaborators"
     fi
+}
+
+function helper{
+    required_args = 2
+    if [$# -ne required_args]; then 
+        echo "Please provide ${REPO_OWNER} and ${REPO_NAME} args!!"
 }
 
 # Main script
